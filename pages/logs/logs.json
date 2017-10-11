@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查看启动日志123123",
+  "disableScroll": true,
+  "enablePullDownRefresh" : true,
+  "backgroundColor": "red"
+}

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/page3/page3",
+    "pages/page4/page4"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "黑土大佬",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "teal",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+
+      "color": "blue",
+
+      "selectedColor": "red",
+
+      "backgroundColor": "yellow",
+      "borderStyle": "white",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页123"
+        },
+        {
+          "pagePath": "pages/logs/logs",
+          "text": "日志abc"
+        },
+        {
+          "pagePath" : "pages/page3/page3",
+          "text" : "page3"
+        },
+        {
+          "pagePath" : "pages/page4/page4",
+          "text" : "page44"
+        }
+      ],
+      
+      "position": "top"
+  },
+  
+  "networkTimeout": {
+    "request": 100000,
+    "downloadFile": 1000000
+  },
+
+  "debug" : false
+
+}

@@ -1,0 +1,11 @@
+<view wx:for="{{[1, 2, 3, 4]}}" wx:for-item="i">
+  <view wx:for="{{[1, 2, 3, 4]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>
+<block wx:for="{{['a','b','c']}}">
+  <view> {{index}}:</view>
+  <view> {{item}}</view>
+</block>
