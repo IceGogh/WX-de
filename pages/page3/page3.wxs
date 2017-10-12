@@ -1,0 +1,10 @@
+var page3wxs = "page3中的wxs脚本的变量";
+var page3wxsfn = function(e){
+  return e;
+}
+module.exports = {
+  elm : page3wxs,
+  page3fn : page3wxsfn
+}
+module.exports.msg = "page3中的msg";
+// ccc

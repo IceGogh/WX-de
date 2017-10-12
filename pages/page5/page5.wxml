@@ -1,0 +1,18 @@
+<template name="msgItem">
+  <view>
+    <text>
+      {{index}}: {{msg}}
+    </text>
+    <p>Time : {{time}}</p>
+  </view>
+</template>
+<template is="msgItem" data="{{...item}}"/> 
+<template name="dan">
+  <view bindtap="tapMe" data-dat="datr">dan111</view>
+</template>
+<template name="shuang">
+  <view>shuang22</view>
+</template>
+<block wx:for="{{[0,1,2]}}" wx:key="">
+  <template is="{{item % 2 === 0 ? 'shuang' : 'dan'}}"></template>
+</block>

@@ -1,0 +1,9 @@
+var foo = "page2。wxs单独脚本文件";
+var bar = function(d){
+    return d;
+};
+
+module.exports = {
+    foo : foo,
+    bar : bar
+};

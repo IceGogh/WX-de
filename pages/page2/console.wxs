@@ -1,0 +1,6 @@
+var a = function () {
+  console.log(3 === arguments.length);
+  console.log(100 === arguments[0]);
+  console.log(200 === arguments[1]);
+  console.log(300 === arguments[2]);
+};

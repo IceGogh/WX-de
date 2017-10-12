@@ -1,0 +1,74 @@
+<view class="out" bindtap="handleTap1">
+  outer view.
+  <view class="middle" catchtap="handleTap2">
+    middle view.
+    <view class="inner" bindtap="handleTap3">inner view,</view>
+  </view>
+</view>  
+<br/>
+<view class="out" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
+  outer2 view.
+  
+    <view class="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">inner2 view,</view>
+</view>  
+<view data-alpha-beta="1" data-alphaBeta="2" bindtap="bindViewTap">
+  DataSet test
+</view>
+
+<wxs module="m1">
+  var msg = 'exports出来的变量';
+  module.exports.message = msg;
+</wxs>
+
+<view>{{m1.message}}</view>
+<wxs module="m2">
+  var getMax = function(data){
+    return  data;
+  }
+  function a () {
+    console.log(3 === arguments.length);
+    console.log(100 === arguments[0]);
+    console.log(200 === arguments[1]);
+    console.log(300 === arguments[2]);
+  };
+  module.exports.get = getMax;
+  module.exports.a = a;
+</wxs>
+<view>{{m2.get(cc)}}</view>
+<view>{{m2.a(100)}}</view>
+
+<import src="imA.wxml"/>
+<template is="aa"></template>
+
+<wxs src="page2.wxs" module="tools"></wxs>
+<view>{{tools.foo}}</view>
+<view>{{tools.bar(cc)}}</view>
+
+<wxs src="../page3/page3.wxs" module="p3wxs"></wxs>
+<view>{{p3wxs.elm}}</view>
+
+<wxs module="con">
+</wxs>
+<view class="section">
+  <view class="section__title">vertical scroll</view>
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view </button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+  </view>
+</view>
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red"  class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>

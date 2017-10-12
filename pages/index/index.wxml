@@ -12,6 +12,7 @@
   </view>
   <hr/>
   <view id="item{{nub}}" bindtap="addd">{{nub}}</view>
+
   <template name="tem">
     <view>
       FirstName : {{firstN}},
@@ -22,8 +23,18 @@
   <template is="tem" data="{{...temA}}"></template>
   <template is="tem" data="{{...temB}}"></template>
   <template is="tem" data="{{...temC}}"></template>
+
+
   <checkbox bindtap="consoleCheck" checked="{{off}}"></checkbox>
-    <view wx:for="{{arr}}" wx:for-index="ind" wx:for-item="key">索引下标：{{ind}}, 元素：{{key}}。 {{temA['firstN']}}</view>
+    <view wx:for="{{['a', 'b']}} " wx:for-index="ind" wx:for-item="key" wx:key="firstN">索引下标：{{ind}}, 元素：{{key}}。 {{temA['firstN']}}</view>
   <hr/>
+  <block wx:if="{{1}}">
+    <view>v1</view>
+    <view>v2</view>
+  </block>
+  <view wx:if="{{2}}">
+    <view>v11</view>
+    <view>v11</view>
+  </view>
   
 </view>

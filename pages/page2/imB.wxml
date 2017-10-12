@@ -1,0 +1,4 @@
+<import src="imA.wxml"/>
+<template name="aa">
+  <view>aa-bb template</view>
+</template>

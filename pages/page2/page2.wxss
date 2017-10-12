@@ -1,0 +1,4 @@
+/* pages/page2/page2.wxss */
+.out{ background: green; width:100%;}
+.middle { background: greenyellow;}
+.inner { background: teal;}

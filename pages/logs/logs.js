@@ -7,10 +7,13 @@ Page({
   },
   onLoad: function () {
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
+      logs: (wx.getStorageSync('logs') || []).map(logggg => {
+        return util.formatTime(new Date(logggg))
       })
-    })
+    });
+
+    console.log(wx.getStorageSync('logs') instanceof Array);
+    console.log(wx.getStorageSync('logs'))
   }
 })
 
