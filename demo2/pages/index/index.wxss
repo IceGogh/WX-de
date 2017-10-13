@@ -1,0 +1,23 @@
+/**index.wxss**/
+.flex-item {
+
+  height:100rpx;
+
+}
+.scroll-view-item {
+  height:300rpx;
+}
+.section_title {
+  background: pink;
+  height: 200rpx;
+  line-height: 200rpx;
+}
+.bc-green {
+  background: green;
+}
+.bc-red {
+  background: red;
+}
+.bc-blue {
+  background: blue;
+}

@@ -1,0 +1,34 @@
+<view class="section">
+  <view class="section_title"> movable-view区域小于 moveable-area</view>
+  <movable-area style="height: 300rpx; width:300rpx; background:red;">
+    <movable-view inertia="true" damping="1000" friction="1000" out-of-bounds="true" style="height: 50rpx; width: 50rpx; background: blue;" x="{{x}}" y="{{y}}" direction="all"></movable-view>
+  </movable-area>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap"> click me to move to  </button>
+  </view>
+</view>
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <text>{{item}}</text>
+    <icon data-ss="{{item}}" type="success" size="{{item}}" bindtap="cc"></icon>
+  </block>
+</view>
+<view class="btn-area">
+  <view class="body-view">
+    <text>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
+<rich-text nodes="{{nodes}}" bindtap="tapNode"></rich-text>
+<progress activeColor='red'  stroke-width="16" percent="{{percent}}" bindtap="percentup"/>
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default </button>
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> primary </button>
+<button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="warn"> warn </button>
+<button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<button bindtap="setPlain">点击设置以上按钮plain属性</button>
+<button bindtap="setLoading">点击设置以上按钮loading属性</button>
+<button open-type="contact">进入客服会话</button>

@@ -1,0 +1,66 @@
+<view class="section">
+  <view class="section_title"> vertical scroll</view>
+  <scroll-view scroll-y style="height: 200rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view id="green" class="scroll-view-item bc-green"></view>
+  <view id="red" class="scroll-view-item bc-red"></view>
+  <view id="yellow" class="scroll-view-item bc-yellow"></view>
+  <view id="blue" class="scroll-view-item bc-blue"></view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tap"> click me to scroll into view</button>
+    <button size="mini" bindtap="tapMove"> click me to scroll</button>
+  </view>
+</view>
+
+<view class="section section_gap">
+  <view class="section_title"> horizontal scroll </view>
+  <scroll-view class="scroll-view-H" scroll-x style="width: 100%">
+    <view id="green" class="scroll-view-item_H bc-green"></view>
+    <view id="red" class="scroll-view-item_H bc-red"></view>
+    <view id="yellow" class="scroll-view-item_H bc-yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc-blue"></view>
+  </scroll-view>
+</view>
+<form bindsubmit='formSubmit' bindreset='formReset'>
+  <view class='section section_gap'>
+    <view class='section_title'> switch  </view>
+    <switch name="switch"/>
+  </view>
+  <view class='section section_gap'>
+    <view class='section_title'>
+      slider
+    </view>
+    <slider name="slider" show-value/>
+  </view>
+  <view class='section'>
+    <view class='section_title'> input </view>
+    <input name="input" placeholder='please input here '/>
+  </view>
+  <view class='section section_gap'>
+    <view class='section_title'> radio1</view>
+    <radio-group name="radio-group">
+      <label>
+        <radio value='radio1'></radio>
+      </label> 
+      <label>
+        <radio value='radio2'></radio>
+      </label> 
+    </radio-group>
+  </view>
+  <view class='section section_gap'>
+    <view class='section_title'> checkbox </view>
+    <checkbox-group name="checkbox">
+      <label>
+        <checkbox value='checkbox1'> checkbox1 </checkbox>
+      </label>
+      <label>
+        <checkbox value='checkbox2'> checkbox2 </checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class='btn-area'>
+    <button form-type='submit'> Submit </button>
+    <button form-type='reset'> Reset</button>
+  </view>
+</form>
